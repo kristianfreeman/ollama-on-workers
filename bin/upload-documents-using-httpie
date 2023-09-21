@@ -1,0 +1,8 @@
+if [ -n "$WORKERS_URL" ]; then
+  http POST $WORKERS_URL < documents.json
+	exit 0
+else
+	echo "No WORKERS_URL env var set"
+	exit 1
+fi
+
